@@ -1,5 +1,7 @@
 # 🚀 Task Manager API (FastAPI)
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Anushka157-cha/Fast-Api)
+
 A production-ready, secure, and modular RESTful API built with **FastAPI**, **SQLAlchemy ORM**, **Alembic**, **Pydantic v2**, and **PyJWT**.
 
 ---
