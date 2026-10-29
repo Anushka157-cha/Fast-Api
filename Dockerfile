@@ -27,5 +27,5 @@ USER appuser
 # Expose default application port
 EXPOSE 8000
 
-# Start FastAPI application with uvicorn
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Start FastAPI application with dynamic PORT support for Railway / Cloud hosts
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]

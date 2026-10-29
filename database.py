@@ -3,6 +3,8 @@ from sqlalchemy.orm import sessionmaker, Session
 from config import settings
 
 DATABASE_URL = settings.DATABASE_URL
+if DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
 # In production (PostgreSQL/MySQL), pool_pre_ping ensures stale/dropped connections are refreshed.
 engine = create_engine(
